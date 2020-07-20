@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Sosial Media | BAKRI AHMAD RIDHWAN</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+
+    /*Membuat Scroll Bar*/
+    .header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #f1f1f1;
+        z-index: 1;
+    }
+
+    .header h2 {
+        text-align: center;
+    }
+
+    .progress-container {
+        width: 100%;
+        height: 8px;
+        background: #ccc;
+    }
+
+    .progress-bar {
+        height: 8px;
+        background: darkblue;
+        width: 0%;
+    }
+
+    .content {
+        padding: 100px 0;
+        margin: 50px auto 0 auto;
+        width: 80%;
+    }
+
+    .jumbotron {
+        height: 450px;
+        background-image: url(assets/gambar/sm.png);
+        background-size: cover;
+        background-attachment: fixed;
+        color: white;
+    }
+
+
+
+    /* RESPONSIVE BREAKPOINT */
+
+    /* SMALL */
+    @media (max-width: 776px) {
+        .navbar-nav {
+            float: left;
+        }
+
+        h1,
+        h2,
+        h5 {
+            text-align: center;
+        }
+
+        .jumbotron {
+            height: 350px;
+        }
+
+
+    }
+
+    /* DESKTOP */
+
+    @media (min-width: 1200px) {
+
+        /* NAVBAR */
+        .navbar-nav a:hover {
+            padding: 5px 5px;
+            background-color: rgb(248, 170, 0);
+            margin: auto;
+            border-radius: 15px;
+            transition: 0.5s;
+
+        }
+    }
+
+
+
+    /*Membuat Section social media*/
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 75%;
+        margin-left: 10%;
+        text-align: center;
+        font-family: arial;
+        background: transparent;
+    }
+
+    .title {
+        color: #000;
+        font-size: 18px;
+    }
+
+    button {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 8px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+    }
+
+    a {
+        text-decoration: none;
+        /*font-size: 22px;*/
+        color: black;
+    }
+
+    button:hover,
+    a:hover {
+        opacity: 0.7;
+    }
+
+    .button-overlay {
+        position: relative;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5 ease;
+        background-color: #20002c;
+    }
+
+    .bungkus-overlay:hover .overlay {
+        opacity: 0.8;
+    }
+
+    .text {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 40%;
+        left: 35%;
+        -webkit-transform: translate(-50, -50);
+        -ms-transform: translate(-50, -50);
+        transform: translate(-50, -50);
+        text-align: center;
+    }
+
+    /* END */
+</style>
+
+<body>
+
+
+    <section id="sosialmedia" class="sosialmedia">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container text-center">
+
+            </div>
+        </div>
+    </section>
+
+    <nav style="margin-top: -35px; font-size: 20px;" class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">/</a>
+            <a style="font-family: cursive; margin-left: -15px; color: lightblue;" class="navbar-brand font-weight-bold"
+                href="#carousel">amd.</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto font-weight-bold">
+                    <a class="nav-item nav-link active mr-4" href="index.html">HOME <span
+                            class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="profil.html">Profil</a>
+                    <a class="nav-item nav-link" href="portofolio.html">Portofolio</a>
+                    <a class="nav-item nav-link" href="galeri.html">Galeri</a>
+                    <a class="nav-item nav-link" href="sosialmedia.html">Sosial Media</a>
+                    <a class="nav-item nav-link" href="fp.html">Final Project</a>
+                    <a class="nav-item nav-link btn btn-warning font-weight-bold ml-1"
+                        href="http://bakriahmadridhwan.blogspot.com/" target="_blank">Blogger</a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="header">
+            <div class="progress-container">
+                <div class="progress-bar" id="myScrollBar"></div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="bakri-katapengantar" class="bakri-katapengantar">
+        <div class="container mt-5">
+            <div class="row">
+                <div style="padding: 10px; background-color: #ccc; border-radius: 5px" class="col text-center">
+                    <h3 class="font-weight-bold">SOSIAL MEDIA</h3>
+                    <p>Di bagian ini berisi konten akun sosial media saya.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sosmed" class="sosmed">
+        <div class="container mt-5">
+            <div id="section4" style="background-color: #f8f9fa;">
+                <h1> Temukan saya <span style="color: #0280ba;">di ....</span></h1>
+                <h5 style="font-weight: bold;">SOSIAL MEDIA</h5>
+                <div class="row">
+
+                    <div class="col-md-4 column mt-5">
+                        <h4 style="text-align: center;"><a href="https://www.instagram.com/ridhwan_amd/" target="_blank"
+                                style="color: darkblue; text-decoration: underline; font-weight: bold;">ridhwan_amd</a>
+                        </h4>
+                        <div class="card bungkus-overlay">
+                            <img src="assets/sosmed/2.jpg" alt="me" style="width: 100%">
+                            <h1>ridhwan_amd</h1>
+                            <p class="title">instagram | ridhwan_amd</p>
+                            <p>Universitas AMIKOM Yogyakarta</p>
+                            <p><button style="background: linear-gradient(to right, #fc466b, #3f5efb)"><i
+                                        class="fa fa-instagram"></i></button></p>
+                            <div class="overlay">
+                                <div class="text">Instagram</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 column mt-5">
+                        <h4 style="text-align: center;"><a href="https://www.facebook.com/Truunk" target="_blank"
+                                style="color: darkblue; text-decoration: underline; font-weight: bold">Bakri Ar</a></h4>
+                        <div class="card bungkus-overlay">
+                            <img src="assets/sosmed/1.jpg" alt="me" style="width: 100%">
+                            <h1>Bakri Ar</h1>
+                            <p class="title">facebook | Bakri Ar</p>
+                            <p>Universitas AMIKOM Yogyakarta</p>
+                            <p><button style="background-color: #396afc"><i class="fa fa-facebook"></i></button></p>
+                            <div class="overlay">
+                                <div class="text">Facebook</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class=" col-md-4 column mt-5">
+                        <h4 style="text-align: center;"><a href="https://twitter.com/BakriRidhwan" target="_blank"
+                                style="color: darkblue; text-decoration: underline; font-weight: bold">BakriRidhwan</a>
+                        </h4>
+                        <div class="card bungkus-overlay">
+                            <img src="assets/sosmed/3.jpeg" alt="me" style="width: 100%">
+                            <h1>BakriRidhwan</h1>
+                            <p class="title">twitter | @BakriRidhwan</p>
+                            <p>Universitas AMIKOM Yogyakarta</p>
+                            <p><button style="background: linear-gradient(to right, #fc466b, #3f5efb)"><i
+                                        class="fa fa-twitter"></i></button></p>
+                            <div class="overlay">
+                                <div class="text">Twitter</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="portofolio" class="portofolio bg-light pb-4 mt-5">
+        <div class="container">
+            <div class="row mb-4 pt-4">
+                <div class="col text-left">
+                    <h2>Lain - lain</h2>
+                    <hr>
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-md mt-5">
+                    <div class="card">
+                        <h2 class="font-weight-bold">Blogger</h2>
+                        <a href="http://bakriahmadridhwan.blogspot.com/" target="_blank" class="thumbnail">
+                            <img src="assets/sosmed/bg.png" class="card-img-top" alt="..." height="200">
+                        </a>
+                        <h6><a href="http://bakriahmadridhwan.blogspot.com/"
+                                target="_blank">bakriahmadridhwan.blogspot.com</a></h6>
+                    </div>
+                </div>
+
+                <div class="col-md mt-5">
+                    <div class="card">
+                        <h2 class="font-weight-bold">Shutterstock</h2>
+                        <a href="https://www.shutterstock.com/g/bakri_ard#" target="_blank" class="thumbnail">
+                            <img src="assets/sosmed/st.png" class="card-img-top" alt="..." height="200">
+                        </a>
+                        <h4><a href="https://www.shutterstock.com/g/bakri_ard#" target="_blank">bakri_ard</a></h4>
+                    </div>
+                </div>
+
+                <div class="col-md mt-5">
+                    <div class="card">
+                        <h2 class="font-weight-bold">Youtube</h2>
+                        <a href="https://www.youtube.com/channel/UC0CXmPx_8WanvTrBV5Spo6g?view_as=subscriber"
+                            target="_blank" class="thumbnail">
+                            <img src="assets/sosmed/yt.png" class="card-img-top" alt="..." height="200">
+                        </a>
+                        <h6><a href="https://www.youtube.com/channel/UC0CXmPx_8WanvTrBV5Spo6g?view_as=subscriber"
+                                target="_blank">dwan tube</a></h6>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="bg-dark text-white mt-5">
+        <div class="container">
+            <div style="height: 250px; align-items: center;" class="row pt-3">
+                <div class="col text-center">
+                    <p><a style="color: white;" class="font-weight-bold" href="//bahridhwan@gmail.com"
+                            target="_blank">bahridhwan@gmail.com</a></p>
+                    <p>Copyright ©2020 All rights reserved | Follow Me</p>
+                    <h3>Let's Make Something Together</h3>
+                    <p style="font-size: smaller; line-height: 0;">Made with Bootstrap 4</p>
+                    <p style="font-weight: bold;"><a href="#sosialmedia">UP</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+
+    <!-- Membuat JS scroll bar-->
+    <script>
+        // When the user scrolls the page, execute myFunction
+        window.onscroll = function () {
+            myFunction()
+        };
+
+        function myFunction() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myScrollBar").style.width = scrolled + "%";
+        }
+    </script>
+</body>
+
+</html>

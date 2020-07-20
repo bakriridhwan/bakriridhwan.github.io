@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Portofolio | BAKRI AHMAD RIDHWAN</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        /*Membuat Scroll Bar*/
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #f1f1f1;
+            z-index: 1;
+        }
+
+        .header h2 {
+            text-align: center;
+        }
+
+        .progress-container {
+            width: 100%;
+            height: 8px;
+            background: #ccc;
+        }
+
+        .progress-bar {
+            height: 8px;
+            background: purple;
+            width: 0%;
+        }
+
+        .content {
+            padding: 100px 0;
+            margin: 50px auto 0 auto;
+            width: 80%;
+        }
+
+        .jumbotron {
+            height: 450px;
+            background-image: url(assets/gambar/4.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+            color: white;
+        }
+
+
+
+        /* RESPONSIVE BREAKPOINT */
+
+        /* SMALL */
+        @media (max-width: 776px) {
+            .navbar-nav {
+                float: left;
+            }
+
+            h2 {
+                text-align: center;
+            }
+
+            button img {
+                width: 100%;
+            }
+
+            modal-body {
+                width: auto;
+                overflow: hidden;
+            }
+
+            .card img {
+                padding-bottom: 10px;
+            }
+        }
+
+        /* DESKTOP */
+
+        @media (min-width: 1200px) {
+
+            /* NAVBAR */
+            .navbar-nav a:hover {
+                padding: 5px 5px;
+                background-color: rgb(248, 170, 0);
+                margin: auto;
+                border-radius: 15px;
+                transition: 0.5s;
+
+            }
+
+            button img {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section id="portofolio" class="portofolio">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container text-center">
+                <img style="width: 200px; height: 210px;" src="assets/fotoku/weld.jpg" width="25%"
+                    class="rounded-circle img-thumbnail">
+                <h1 class="display-5"
+                    style="font-weight: bold; text-shadow: 1px 1px 10px rgba(0,0,0,0.5); text-shadow: 3px 5px solid black;">
+                    MY
+                    PORTOFOLIO
+                </h1>
+            </div>
+        </div>
+    </section>
+
+
+    <nav style="margin-top: -35px; font-size: 20px;" class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">/</a>
+            <a style="font-family: cursive; margin-left: -15px; color: lightblue;" class="navbar-brand font-weight-bold"
+                href="#portofolio">amd.</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto font-weight-bold">
+                    <a class="nav-item nav-link active mr-4" href="index.html">HOME <span
+                            class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="profil.html">Profil</a>
+                    <a class="nav-item nav-link" href="portofolio.html">Portofolio</a>
+                    <a class="nav-item nav-link" href="galeri.html">Galeri</a>
+                    <a class="nav-item nav-link" href="sosialmedia.html">Sosial Media</a>
+                    <a class="nav-item nav-link" href="fp.html">Final Project</a>
+                    <a class="nav-item nav-link btn btn-warning font-weight-bold ml-1"
+                        href="http://bakriahmadridhwan.blogspot.com/" target="_blank">Blogger</a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="header">
+            <div class="progress-container">
+                <div class="progress-bar" id="myScrollBar"></div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="bakri-katapengantar" class="bakri-katapengantar">
+        <div class="container mt-5">
+            <div class="row">
+                <div style="padding: 10px; background-color: #ccc; border-radius: 5px" class="col text-center">
+                    <h3 style="font-weight: bold;">PORTOFOLIO</h3>
+                    <p>Di bagian ini berisi konten riwayat hal-hal, pencapaian yang pernah saya lakukan. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="bakri-sekolah" class="bakri-sekolah">
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col text-left">
+                    <h2>Semasa Sekolah</h2>
+                    <hr>
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-md">
+                    <div class="card">
+                        <a href="assets/portofolio/sekolah/1.jpg" target="_blank" class="thumbnail">
+                            <img src="assets/portofolio/sekolah/1.jpg" class="card-img-top" alt="..." height="250">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md">
+                    <div class="card">
+                        <a href="assets/portofolio/sekolah/2P.jpg" target="_blank" class="thumbnail">
+                            <img src="assets/portofolio/sekolah/2.jpg" class="card-img-top" alt="..." height="250">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md">
+                    <div class="card">
+                        <a href="assets/portofolio/sekolah/4P.jpg" target="_blank" class="thumbnail">
+                            <img src="assets/portofolio/sekolah/4.jpg" class="card-img-top" alt="..." height="250">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="bakri-olahraga" class="bakri-olahraga">
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col text-left">
+                    <h2>Olahraga</h2>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md">
+                    <div class="card">
+                        <a href="assets/portofolio/olahraga/1.png" target="_blank" class="thumbnail">
+                            <img src="assets/portofolio/olahraga/1.png" class="card-img-top" alt="..." height="300">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md">
+                    <div class="card">
+                        <a href="assets/portofolio/olahraga/2.jpg" target="_blank" class="thumbnail">
+                            <img src="assets/portofolio/olahraga/2.jpg" class="card-img-top" alt="..." height="300">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="kursus" class="kursus">
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col text-left">
+                    <h2>Kursus</h2>
+                    <hr>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md">
+                    <div class="card">
+                        <a href="assets/portofolio/sekolah/7.jpg" target="_blank" class="thumbnail">
+                            <img src="assets/portofolio/sekolah/7.jpg" class="card-img-top" alt="..." height="350">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md">
+                    <div class="card">
+                        <a href="assets/portofolio/sekolah/3.jpg" target="_blank" class="thumbnail">
+                            <img src="assets/portofolio/sekolah/3.jpg" class="card-img-top" alt="..." height="350">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+    </section>
+
+
+    <section id="kuliah" class="kuliah">
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col text-left">
+                    <h2>Semasa Kuliah</h2>
+                    <hr>
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-md">
+                    <div class="card">
+                        <a href="assets/portofolio/kuliah/1.png" target="_blank" class="thumbnail">
+                            <img src="assets/portofolio/kuliah/1.png" class="card-img-top" alt="..." height="250">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md">
+                    <div class="card">
+                        <a href="assets/portofolio/kuliah/2.png" target="_blank" class="thumbnail">
+                            <img src="assets/portofolio/kuliah/2.png" class="card-img-top" alt="..." height="250">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md">
+                    <div class="card">
+                        <a href="assets/portofolio/kuliah/4.png" target="_blank" class="thumbnail">
+                            <img src="assets/portofolio/kuliah/4L.png" class="card-img-top" alt="..." height="250">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="bg-dark text-white mt-5">
+        <div class="container">
+            <div style="height: 250px; align-items: center;" class="row pt-3">
+                <div class="col text-center">
+                    <p><a style="color: white;" class="font-weight-bold" href="//bahridhwan@gmail.com"
+                            target="_blank">bahridhwan@gmail.com</a></p>
+                    <p>Copyright ©2020 All rights reserved | Follow Me</p>
+                    <h3>Let's Make Something Together</h3>
+                    <p style="font-size: smaller; line-height: 0;">Made with Bootstrap 4</p>
+                    <p style="font-weight: bold;"><a href="#portofolio">UP</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+
+    <!-- Membuat JS scroll bar-->
+    <script>
+        // When the user scrolls the page, execute myFunction
+        window.onscroll = function () {
+            myFunction()
+        };
+
+        function myFunction() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myScrollBar").style.width = scrolled + "%";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>Profil | BAKRI AHMAD RIDHWAN</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /*Membuat Scroll Bar*/
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #f1f1f1;
+            z-index: 1;
+        }
+
+        .header h2 {
+            text-align: center;
+        }
+
+        .progress-container {
+            width: 100%;
+            height: 8px;
+            background: #ccc;
+        }
+
+        .progress-bar {
+            height: 8px;
+            background: #222bad;
+            width: 0%;
+        }
+
+        .content {
+            padding: 100px 0;
+            margin: 50px auto 0 auto;
+            width: 80%;
+        }
+
+        /* JUMBOTRON */
+        .jumbotron {
+            height: 450px;
+            background-image: url(assets/gambar/5.jpg);
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: 0 -100px;
+            color: white;
+            overflow: hidden;
+        }
+
+        .jumbotron img {
+            border-color: #eaeaea;
+        }
+
+        /* PORTOFOLIO */
+        .portofolio .thumbnail {
+            opacity: 0;
+            transition: .5s;
+            transform: translate(0, -40px);
+        }
+
+        .portofolio .thumbnail.muncul {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+
+        /* PARAGRAF */
+        .bakri-pkiri,
+        .bakri-pkanan {
+            opacity: 0;
+            transform: translate(-50px, 0) rotate(15deg);
+            transition: 1s;
+        }
+
+        .bakri-pkanan {
+            transform: translate(50px, 0) rotate(-15deg);
+        }
+
+        .bakri-pkiri.pmuncul,
+        .bakri-pkanan.pmuncul {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+
+
+        /* RESPONSIVE BREAKPOINT */
+
+        /* SMALL */
+        @media (max-width: 776px) {
+            .navbar-nav {
+                float: left;
+            }
+
+            .thumbnail img {
+                padding-bottom: 10px;
+            }
+
+            h2 {
+                text-align: center;
+            }
+
+            .bakri-video h4 {
+                padding-bottom: 20px;
+            }
+        }
+
+        /* DESKTOP */
+
+        @media (min-width: 1200px) {
+
+            /* NAVBAR */
+            .navbar-nav a:hover {
+                padding: 5px 5px;
+                background-color: rgb(248, 170, 0);
+                margin: auto;
+                border-radius: 15px;
+                transition: 0.5s;
+
+            }
+        }
+
+
+        .bakri-tentang {
+            background-image: url(assets/gambar/bg.jpg);
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section id="profil" class="profil">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container text-center">
+                <img style="width: 200px; height: 210px;" src="assets/fotoku/profil.jpeg" width="25%"
+                    class="rounded-circle img-thumbnail">
+                <h1 class="display-5" style="font-weight: bold; text-shadow: 1px 1px 10px rgba(0,0,0,0.5);">BAKRI AHMAD
+                    RIDHWAN
+                </h1>
+                <p class="lead" style="font-weight: bold;">D3 TEKNIK INFORMATIKA 2019 | UNIVERSITAS AMIKOM YOGYAKARTA
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <nav style="margin-top: -35px; font-size: 20px;" class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">/</a>
+            <a style="font-family: cursive; margin-left: -15px; color: lightblue;" class="navbar-brand font-weight-bold"
+                href="#profil">amd.</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto font-weight-bold">
+                    <a class="nav-item nav-link active mr-4" href="index.html">HOME <span
+                            class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="profil.html">Profil</a>
+                    <a class="nav-item nav-link" href="portofolio.html">Portofolio</a>
+                    <a class="nav-item nav-link" href="galeri.html">Galeri</a>
+                    <a class="nav-item nav-link" href="sosialmedia.html">Sosial Media</a>
+                    <a class="nav-item nav-link" href="fp.html">Final Project</a>
+                    <a class="nav-item nav-link btn btn-warning font-weight-bold ml-1"
+                        href="http://bakriahmadridhwan.blogspot.com/" target="_blank">Blogger</a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="header">
+            <div class="progress-container">
+                <div class="progress-bar" id="myScrollBar"></div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="bakri-katapengantar" class="bakri-katapengantar">
+        <div class="container mt-5">
+            <div class="row">
+                <div style="padding: 10px; background-color: #ccc; border-radius: 5px" class="col text-center">
+                    <h3 class="font-weight-bold">PROFIL</h3>
+                    <p>Di bagian ini berisi konten sekilas tentang saya.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="about" class="about">
+        <div class="container mt-5">
+            <div class="row mb-4">
+                <div class="col text-left">
+                    <h2>Sekilas</h2>
+                    <hr>
+                </div>
+            </div>
+
+            <div style="margin-top: -5px;" class="row justify-content-center">
+                <div class="col-md-5 text-center">
+                    <p class="bakri-pkiri">Basic skill saya adalah TEKNIK PENGELASAN, dan dulu pernah bekerja di
+                        Perusahaan Kawat Las (Elektroda) sebagai WELDER</p>
+                </div>
+                <div class="col-md-5 text-center">
+                    <p class="bakri-pkanan">Kemudian saat ini saya sedang menempuh pendidikan D3 TEKNIK INFORMATIKA di
+                        Universitas AMIKOM Yogyakarta</p>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+        <section id="bakri-tentang" class="bakri-tentang">
+            <div class="container mt-5 pb-5">
+                <div class="row">
+                    <div class="col">
+                        <h2 style="color: white;">Tentang</h2>
+                        <hr>
+                    </div>
+                </div>
+
+                <div class="accordion" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                                    data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    PENDIDIKAN
+                                </button>
+                            </h2>
+                        </div>
+
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                > FORMAL :<br>
+                                <div class="my-2 mx-4">
+                                    1. SD N KLEDUNG KARANGDALEM<br>
+                                    2. SMP N 33 PURWOREJO<br>
+                                    3. SMK N 1 PURWOREJO (Teknik Pengelasan)<br>
+                                    4. Universitas AMIKOM Yogyakarta (sekarang - Teknik Informatika)
+                                </div>
+                                <hr>
+                                > NON FORMAL :<br>
+                                <div class="my-2 mx-4">
+                                    1. PT. PINDAD PERSERO - BANDUNG (Prakerin - Teknik Pengelasan)<br>
+                                    2. UPT BLK PURWOREJO (Kursus - Yunior Technical Support)<br>
+                                    3. PT. KAMPUH WELDING INDONESIA - SURABAYA (Kursus - Teknik Pengelasan)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                    data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                                    aria-controls="collapseTwo">
+                                    PENGALAMAN
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                > Kerja :<br>
+                                <div class="my-2 mx-4">
+                                    1. PT. INTAN PERTIWI INDUSTRI - TANGERANG (Sebagai WELDER)
+                                </div>
+                                > Prakerin :<br>
+                                <div class="my-2 mx-4">
+                                    1. PT. PINDAD PERSERO - BANDUNG (Prakerin - Teknik Pengelasan)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                    data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                                    aria-controls="collapseThree">
+                                    HOBI
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                1. FOTOGRAFI<br>
+                                2. OLAHRAGA BOLA VOLI<br>
+                                3. BELAJAR EDITING<br>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingFour">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                    data-toggle="collapse" data-target="#collapseFour" aria-expanded="false"
+                                    aria-controls="collapseFour">
+                                    SKILL
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                > Teknik Pengelasan<br>
+                                <div class="my-2 mx-4">
+                                    <p></p>
+                                </div>
+                                > Volleyball<br>
+                                <div class="my-2 mx-4">
+                                    <p></p>
+                                </div>
+                                > Editing Video dan Fotografi<br>
+                                <div class="my-2 mx-4">
+                                    <p></p>
+                                </div>
+                                > Web Development<br>
+                                <div class="my-2 mx-4">
+                                    <p></p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+
+    <section id="portofolio" class="portofolio bg-light pb-4 mt-5">
+        <div class="container">
+            <div class="row mb-4 pt-4">
+                <div class="col text-left">
+                    <h2>Foto</h2>
+                    <hr>
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-md">
+                    <div class="card">
+                        <a href="assets/fotoku/9.png" target="_blank" class="thumbnail">
+                            <img src="assets/fotoku/9.png" class="card-img-top" alt="..." height="250">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md">
+                    <div class="card">
+                        <a href="assets/fotoku/4.jpg" target="_blank" class="thumbnail">
+                            <img src="assets/fotoku/4.jpg" class="card-img-top" alt="..." height="250">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md">
+                    <div class="card">
+                        <a href="assets/fotoku/10.jpeg" target="_blank" class="thumbnail">
+                            <img src="assets/fotoku/10.jpeg" class="card-img-top" alt="..." height="250">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-md">
+                    <div class="card">
+                        <a href="assets/fotoku/5.JPG" target="_blank" class="thumbnail">
+                            <img src="assets/fotoku/5.JPG" class="card-img-top" alt="..." height="250">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md">
+                    <div class="card">
+                        <a href="assets/fotoku/11.png" target="_blank" class="thumbnail">
+                            <img src="assets/fotoku/11.png" class="card-img-top" alt="..." height="250">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md">
+                    <div class="card">
+                        <a href="assets/fotoku/6.jpeg" target="_blank" class="thumbnail">
+                            <img src="assets/fotoku/6.jpeg" class="card-img-top" alt="..." height="250">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+    <section id="video" class="video">
+        <div class="container mt-5">
+            <div class="row mb-4 pt-4">
+                <div class="col text-left">
+                    <h2>Video</h2>
+                    <hr>
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-md">
+                    <div class="bakri-video">
+                        <video height="200" controls preload="metadata">
+                            <source src="assets/video/1.mp4" type="video/mp4">
+                        </video>
+                        <h4 class="text-center">Proses Pengelasan Pipa</h4>
+                    </div>
+                </div>
+
+                <div class="col-md">
+                    <div class="bakri-video">
+                        <video height="200" controls preload="metadata">
+                            <source src="assets/video/2.mp4" type="video/mp4">
+                        </video>
+                        <h4 class="text-center">Voli</h4>
+                    </div>
+                </div>
+
+                <div class="col-md">
+                    <div class="bakri-video">
+                        <video height="200" controls preload="metadata">
+                            <source src="assets/video/3.mp4" type="video/mp4">
+                        </video>
+                        <h4 class="text-center">Testimoni Mata Kuliah</h4>
+                    </div>
+                </div>
+
+            </div>
+
+
+    </section>
+
+    <footer class="bg-dark text-white mt-5">
+        <div class="container">
+            <div style="height: 250px; align-items: center;" class="row pt-3">
+                <div class="col text-center">
+                    <p><a style="color: white;" class="font-weight-bold" href="//bahridhwan@gmail.com"
+                            target="_blank">bahridhwan@gmail.com</a></p>
+                    <p>Copyright ©2020 All rights reserved | Follow Me</p>
+                    <h3>Let's Make Something Together</h3>
+                    <p style="font-size: smaller; line-height: 0;">Made with Bootstrap 4</p>
+                    <p style="font-weight: bold;"><a href="#profil">UP</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+
+    <!-- Membuat JS scroll bar-->
+    <script>
+        // When the user scrolls the page, execute myFunction
+        window.onscroll = function () {
+            myFunction()
+        };
+
+        function myFunction() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myScrollBar").style.width = scrolled + "%";
+        }
+    </script>
+</body>
+
+</html>
